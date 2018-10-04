@@ -1,0 +1,74 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        gradleVersion = '3.2.0'
+        kotlinVersion = '1.2.71'
+        androidSupportVersion = '27.1.1'
+        navigationVersion='1.0.0-alpha06'
+        ankoVersion='0.10.3'
+        conductorVersion='2.1.5'
+        retrofitVersion='2.3.0'
+
+        constraintLayoutVersion = '2.0.0-alpha2'
+        legacySupportVersion = '1.0.0'
+        appCompatVersion = '1.0.0'
+        materialVersion = '1.0.0'
+        recyclerViewVersion = '1.0.0'
+        cardViewVersion = '1.0.0'
+        browserVersion = '1.0.0'
+        nsScannerVersion = '1.1.0'
+        nsBleVersion = '2.0-beta4'
+        nsDfuVersion = '1.7.0'
+
+        junitVersion = '4.12'
+        runnerVersion = '1.1.0-alpha4'
+        espressoVersion = '3.1.0-alpha4'
+        findBugsVersion = '3.0.2'
+
+        // Kotlin support
+        okHttpVersion = '3.11.0'
+        rxJavaVersion = '2.2.2'
+        rxAndroidVersion = '2.1.0'
+        rxBindingVersion = '2.1.1'
+        eventBusVersion = '3.1.1'
+        commonsIoVersion = '2.6'
+        easyPermissionsVersion = '1.3.0'
+        jodaTimeVersion = '2.10'
+        placesVersion = '15.0.1'
+        authVersion = '16.0.0'
+        ktxVersion = '1.0.0'
+        sentryVersion = '1.7.10'
+        picassoVersion = '2.71828'
+        appAuthVersion = 'master-SNAPSHOT'
+        jsonPathVersion = '2.4.0'
+        topSnackBarVersion = '1.1.1'
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradleVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+        classpath "android.arch.navigation:navigation-safe-args-gradle-plugin:1.0.0-alpha06"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

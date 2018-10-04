@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragment_select_device">
+
+    <fragment
+        android:id="@+id/fragment_select_device"
+        android:name="com.technocreatives.rawa.btconnection.fragments.selectdevice.SelectDeviceFragment"
+        tools:layout="@layout/fragment_selectdevice">
+        <!--
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_settings"
+            app:destination="@id/fragment_settings" />
+            -->
+        <action
+            android:id="@+id/action_fragment_select_device_to_fragment_device"
+            app:destination="@id/fragment_device" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment_device"
+        android:name="com.technocreatives.rawa.btconnection.fragments.DeviceFragment"
+        tools:layout="@layout/fragment_device">
+
+        <argument
+            android:name="mac_address"
+            app:argType="string" />
+    </fragment>
+        <!--
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_settings"
+            app:destination="@id/fragment_settings" />
+            -->
+</navigation>
